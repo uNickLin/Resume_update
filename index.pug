@@ -1,0 +1,70 @@
+#app
+  .resume
+    .left_block
+      #aboutme
+        h1 ABOUT ME
+        .title_hr
+        p 原半導體產業工程師，除了職務內的作業，也以VBA為部門設計報表。因喜歡追求更好的網頁互動設計而轉向前端工程師發展，同時也具備一些後端(RoR)的基礎技能，希望未來能結合前、後端技術增加工作效率。
+
+        #exp
+          .edu
+            .icon
+              i.fa.fa-graduation-cap
+            .detail
+              ul
+                li(v-for="value in college") {{value}}
+          .job
+            .icon
+              i.fa.fa-briefcase
+            .detail
+              ul
+                li(v-for="value in company") {{value}}
+
+      #achievement
+        h1 ACHIEVEMENT
+        .title_hr
+        ul
+          li 	畢業論文競賽獲第一名殊榮
+          li 	年度人因年會獲佳作
+          li TOEIC scored 723
+          li 參與部門<abbr title="Continuous Improvement Program">CIP</abbr>計畫，負責報表功能設計
+        img.award_icon(src="https://image.flaticon.com/icons/svg/321/321773.svg", alt="")
+
+      #portfolio
+        h1 Portfolio
+        .title_hr
+        ul
+          li(v-for="f in files")
+            portfolio(:file = "f")
+
+    .photo
+    .contacts
+      h2.name 林子皓
+      h3.name.en Nick Lin
+      .contactways
+        h4 contacts
+        .smalltitle_hr
+        ul
+          li.mail
+            a(href='mailto:unick.zhow@gmail.com')
+              i.fa.fa-envelope
+              span unick.zhow@gmail.com
+          li.mobile
+            i.fa.fa-mobile.fa-2x 
+            sapn +886-983-232-597
+          li.github
+            a(href="https://github.com/uNickLin?tab=repositories" target="_blank")
+              i.fa.fa-github.fa-2x
+              span Github
+          li.codepen
+            a(href="https://codepen.io/uNickHow/" target="_blank")
+              i.fa.fa-codepen
+              span Codepen
+              
+              
+      
+template#portfolio_format
+  .portfolio_list
+      .portfolio_cover(:style="portfolio_css")
+      h4 {{file.name}}
+      a(href="{{file.link}}") check it out

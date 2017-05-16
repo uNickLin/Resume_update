@@ -1,0 +1,288 @@
+@charset "UTF-8";
+* {
+  font-family: "Fjalla One", sans-serif, 微軟正黑體;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  box-sizing: border-box;
+}
+
+body, html {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  background-color: #EEEFEA;
+}
+
+.title_hr {
+  border: solid 3px #FFC857;
+  width: 80px;
+  height: auto;
+  margin-bottom: 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.smalltitle_hr {
+  border: solid 3px #FFC857;
+  width: 40px;
+  height: auto;
+  margin: auto auto;
+  margin-bottom: 40px;
+}
+
+p {
+  text-indent: 34px;
+}
+
+.resume {
+  width: 800px;
+  height: auto;
+  margin: auto;
+  margin-bottom: 30px;
+  top: 50px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #333;
+  box-shadow: -8px 8px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.left_block {
+  background-color: #fff;
+}
+
+#aboutme {
+  width: 530px;
+  height: auto;
+  padding: 10px 40px;
+  cursor: default;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+#aboutme:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+#aboutme .edu, #aboutme .job {
+  margin-top: 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#aboutme .edu:hover i, #aboutme .job:hover i {
+  -webkit-animation: pulse 1s both infinite;
+          animation: pulse 1s both infinite;
+}
+#aboutme .job {
+  margin-left: 50px;
+}
+#aboutme i {
+  font-size: 30px;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  background-color: #FFC857;
+  border-radius: 50%;
+  line-height: 60px;
+  color: #fff;
+  margin: 0 10px 10px 10px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+#aboutme ul {
+  list-style: none;
+  padding: 0px;
+}
+#aboutme span {
+  font-size: 10px;
+  color: #333;
+}
+
+#achievement {
+  width: 530px;
+  height: auto;
+  padding: 10px 40px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: relative;
+  cursor: default;
+}
+#achievement img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 100px;
+  top: 110px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+#achievement:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+#achievement:hover img {
+  -webkit-animation: tada 1s both;
+          animation: tada 1s both;
+}
+#achievement li {
+  line-height: 30px;
+}
+
+#portfolio {
+  width: 530px;
+  height: auto;
+  padding: 10px 40px;
+  margin-bottom: 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: default;
+}
+#portfolio:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+#portfolio .portfolio_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+#portfolio .portfolio_list:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+#portfolio .portfolio_list:hover .portfolio_cover {
+  background-size: auto 110%;
+}
+#portfolio .portfolio_list .portfolio_cover {
+  width: 80px;
+  height: 80px;
+  background-size: auto 100%;
+  background-position: center center;
+  margin-top: 20px;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+#portfolio ul {
+  list-style: none;
+  padding-left: 0px;
+  margin-top: -10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+#portfolio ul li {
+  margin: 5px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#portfolio ul li p {
+  margin-top: 10px;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: 35px;
+  top: 35px;
+  border: solid 10px #fff;
+  border-radius: 50%;
+  background-image: url(6A9D4297.jpg);
+  background-position: -75px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: -8px 8px 10px 2px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.photo:hover {
+  -webkit-transform: translate(-5px, -5px);
+          transform: translate(-5px, -5px);
+  box-shadow: -8px 8px 15px 2px rgba(0, 0, 0, 0.8);
+}
+
+.contacts {
+  width: 270px;
+  height: 300px;
+  color: #fff;
+  position: absolute;
+  right: 0px;
+  top: 250px;
+  padding: 10px 20px;
+  text-align: center;
+}
+.contacts .name, .contacts .en {
+  text-align: center;
+}
+.contacts .en {
+  margin-bottom: 60px;
+}
+.contacts .contactways {
+  margin-top: 200px;
+}
+.contacts .contactways ul {
+  margin: 0;
+  margin-left: 12px;
+  padding: 0;
+  list-style: none;
+}
+.contacts .contactways ul a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-decoration: none;
+}
+.contacts .contactways ul a:link, .contacts .contactways ul a:visited, .contacts .contactways ul a:active {
+  color: #fff;
+}
+.contacts .contactways ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+}
+.contacts .contactways i {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  background-color: #FFC857;
+  margin-right: 10px;
+}
+.contacts .contactways span {
+  margin-top: 4px;
+}

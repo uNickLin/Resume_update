@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Resume</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"></link>
+  
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Fjalla+One'>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+
+<body>  
+  <div id="app">
+    <div class="resume">
+      <div class="left_block">
+        <div id="aboutme">
+          <h1>ABOUT ME</h1>
+          <div class="title_hr"></div>
+          <p>原半導體產業工程師，除了職務內的作業，也以VBA為部門設計報表。因喜歡追求更好的網頁互動設計而轉向前端工程師發展，同時也具備一些後端(RoR)的基礎技能，希望未來能結合前、後端技術增加工作效率。</p>
+          <div id="exp">
+            <div class="edu">
+              <div class="icon"><i class="fa fa-graduation-cap"></i></div>
+              <div class="detail">
+                <ul>
+                  <li v-for="value in college">{{value}}</li>
+                </ul>
+              </div>
+            </div>
+            <div class="job">
+              <div class="icon"><i class="fa fa-briefcase"></i></div>
+              <div class="detail">
+                <ul>
+                  <li v-for="value in company">{{value}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="achievement">
+          <h1>ACHIEVEMENT</h1>
+          <div class="title_hr"></div>
+          <ul>
+            <li>	畢業論文競賽獲第一名殊榮</li>
+            <li>	年度人因年會獲佳作</li>
+            <li>TOEIC scored 723</li>
+            <li>參與部門<abbr title="Continuous Improvement Program">CIP</abbr>計畫，負責報表功能設計</li>
+          </ul><img class="award_icon" src="https://image.flaticon.com/icons/svg/321/321773.svg" alt=""/>
+        </div>
+        <div id="portfolio">
+          <h1>Portfolio</h1>
+          <div class="title_hr"></div>
+          <ul>
+            <li v-for="f in files">
+              <portfolio :file="f"></portfolio>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="photo"></div>
+      <div class="contacts">
+        <h2 class="name">林子皓</h2>
+        <h3 class="name en">Nick Lin</h3>
+        <div class="contactways">
+          <h4>contacts</h4>
+          <div class="smalltitle_hr"></div>
+          <ul>
+            <li class="mail"><a href="mailto:unick.zhow@gmail.com"><i class="fa fa-envelope"></i><span>unick.zhow@gmail.com</span></a></li>
+            <li class="mobile"><i class="fa fa-mobile fa-2x"> </i>
+              <sapn>+886-983-232-597</sapn>
+            </li>
+            <li class="github"><a href="https://github.com/uNickLin?tab=repositories" target="_blank"><i class="fa fa-github fa-2x"></i><span>Github</span></a></li>
+            <li class="codepen"><a href="https://codepen.io/uNickHow/" target="_blank"><i class="fa fa-codepen"></i><span>Codepen</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <template id="portfolio_format">
+    <div class="portfolio_list">
+      <div class="portfolio_cover" :style="portfolio_css"></div>
+      <h4>{{file.name}}</h4><a :href='file.link' target="_blank">check it out</a>
+    </div>
+  </template>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.min.js'></script>
+  <script src="js/index.js"></script>
+
+</body>
+</html>
